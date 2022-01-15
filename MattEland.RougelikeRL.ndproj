@@ -2394,7 +2394,7 @@ select new {
 // By default issues of this rule have a **Low** severity
 // because they reflect more an advice than a problem.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Non-static classes should be instantiated or turned to static</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Non-static classes should be instantiated or turned to static</Name>
 // <Id>ND1207:NonStaticClassesShouldBeInstantiatedOrTurnedToStatic</Id>
 warnif count > 0
 
@@ -5932,6 +5932,7 @@ let canMethodBeConsideredAsDeadProc = new Func<IMethod, bool>(
          !m.IsEventRemover &&
          !m.IsGeneratedByCompiler &&
          !m.ParentType.IsDelegate &&
+         !m.ParentType.DeriveFrom("Microsoft.Maui.Controls.ContentPage") && 
 
          // Don't consider Global ASP.NET methods as unused
          !m.ParentType.DeriveFrom("System.Web.HttpApplication".AllowNoMatch()) &&
@@ -7270,7 +7271,8 @@ where f.IsStatic &&
      !f.IsEnumValue && 
      !f.IsGeneratedByCompiler &&
      !f.IsLiteral &&
-     !f.IsInitOnly
+     !f.IsInitOnly &&
+     !f.ParentType.Name.Contains("Resource")
 
 let methodAssigningField = f.MethodsAssigningMe
 
@@ -8503,7 +8505,7 @@ warnif count > 0
 let hashsetShortNames = Namespaces.Where(n => n.Name.Length > 0).Select(n => n.SimpleName).ToHashSetEx()
 
 from t in JustMyCode.Types
-where hashsetShortNames.Contains(t.Name)
+where hashsetShortNames.Contains(t.Name) && !t.NameLike("App")
 select new { 
    t, 
    namespaces = Namespaces.Where(n => n.SimpleName == t.Name),
@@ -9226,7 +9228,7 @@ select new {
 // The estimated Debt, which means the effort to fix such issue,
 // is equal to 2 minutes plus 5 minutes per type in *typesOutOfMainNamespace*.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Types declared in the same namespace, should have their source files stored in the same directory</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Types declared in the same namespace, should have their source files stored in the same directory</Name>
 // <Id>ND2105:TypesDeclaredInTheSameNamespaceShouldHaveTheirSourceFilesStoredInTheSameDirectory</Id>
 
 warnif count > 0 
@@ -9739,6 +9741,7 @@ warnif count > 0 from f in Application.Fields where
   (f.NameLike (@"Uri$") || 
    f.NameLike (@"Url$")) && 
    f.FieldType != null &&
+   !f.ParentType.NameLike("Resource") &&
    f.FieldType.FullName != "System.Uri"
 select new { 
    f, 
@@ -9844,6 +9847,41 @@ select new {
 // that all classes that derive from a class with a virtual 
 // clone method, override this method.
 //</HowToFix>]]></Query>
+        <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>All issues (grouped per rules)</Name>
+let issues = Issues
+let rules = issues.ToLookup(i => i.Rule)
+from grouping in rules
+let r = grouping.Key
+let ruleIssues = grouping.ToArray()
+orderby ruleIssues.Length descending
+let debt = ruleIssues.Sum(i => i.Debt)
+let annualInterest = ruleIssues.Sum(i => i.AnnualInterest)
+let breakingPoint = debt.BreakingPoint(annualInterest)
+select new { r, 
+             ruleIssues, 
+             debt,
+             annualInterest, 
+             breakingPoint,
+             Category = r.Category
+}
+
+//<Description>
+// **Debt**: Estimated effort to fix the rule issues.
+//
+// **Annual Interest**: Estimated annual cost to leave the rule issues unfixed.
+//
+// **Breaking Point**: Estimated point in time from now, when leaving the 
+// rule issues unfixed cost as much as fixing the issues.
+// A low value indicates easy-to-fix issues with high annual interest.
+// This value can be used to prioritize issues fix, to significantly 
+// reduce interest with minimum effort.
+//
+// **Unfold** the cell in *ruleIssues* column to preview all its issues.
+//
+// **Double-click a rule** to edit the rule and list all its issues.
+//
+// More documentation: https://www.ndepend.com/docs/technical-debt
+//</Description>]]></Query>
       </Group>
       <Group Name="System.Collections" Active="True" ShownInReport="False">
         <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Collection properties should be read only</Name>
