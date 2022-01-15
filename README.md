@@ -1,6 +1,9 @@
 # RoguelikeRL
 By Matt Eland ([Twitter](https://twitter.com/integerman) / [LinkedIn](https://linkedin.com/in/matteland) / [YouTube](https://MattOnDataScience.com))
 
+[![Visualization of the codebase](./diagram.svg)](https://octo-repo-visualization.vercel.app/?repo=integerman%2FRoguelikeRL)
+[View interactive Diagram](https://octo-repo-visualization.vercel.app/?repo=integerman%2FRoguelikeRL)
+
 ## Overview
 
 This project is an experiment in using ML.NET machine learning to teach a computer how to play a Roguelite computer game. It is not intended to be a commercial product, but I do want this project to support player-controlled, ML-controlled, and ML-assisted modes so the various aspects of machine learning can shine through.
