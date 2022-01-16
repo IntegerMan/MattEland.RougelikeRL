@@ -9,18 +9,27 @@
     </IDEFile>
   </IDEFiles>
   <Assemblies />
-  <FrameworkAssemblies />
+  <FrameworkAssemblies>
+    <Name>System.Runtime</Name>
+    <Name>Mono.Android</Name>
+    <Name>Microsoft.Maui.Controls</Name>
+    <Name>Microsoft.Maui.Controls.Xaml</Name>
+    <Name>Microsoft.Maui</Name>
+    <Name>Microsoft.Maui.Essentials</Name>
+    <Name>Microsoft.Maui.Controls.Compatibility</Name>
+    <Name>System.Collections</Name>
+  </FrameworkAssemblies>
   <Dirs>
-    <Dir>C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319</Dir>
-    <Dir>C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\WPF</Dir>
-    <Dir>C:\Users\MattE\.nuget\packages</Dir>
+    <Dir>C:\Windows\Microsoft.NET\Framework\v4.0.30319</Dir>
+    <Dir>C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF</Dir>
+    <Dir>C:\Users\Admin\.nuget\packages</Dir>
   </Dirs>
-  <MergeCodeGeneratedByCompiler>True</MergeCodeGeneratedByCompiler>
-  <ZipSourceFiles>True</ZipSourceFiles>
+  <MergeCodeGeneratedByCompiler>False</MergeCodeGeneratedByCompiler>
+  <ZipSourceFiles>False</ZipSourceFiles>
   <Report Kind="0" SectionsEnabled="110591" XslPath="" Flags="261120" />
   <BuildComparisonSetting ProjectMode="CurrentProject" BuildMode="NDaysAgoAnalysisResult" ProjectFileToCompareWith="" BuildFileToCompareWith="" NDaysAgo="30" />
-  <BaselineInUISetting ProjectMode="CurrentProject" BuildMode="NDaysAgoAnalysisResult" ProjectFileToCompareWith="" BuildFileToCompareWith="" NDaysAgo="30" />
-  <CoverageFiles CoverageDir="" UncoverableAttribute="" />
+  <BaselineInUISetting ProjectMode="CurrentProject" BuildMode="ParticularAnalysisResult" ProjectFileToCompareWith=".\MattEland.RougelikeRL.ndproj" BuildFileToCompareWith=".\NDependOut\NDependAnalysisResult_MattEland_RougelikeRL_2022Jan15_22h51.ndar" NDaysAgo="30" />
+  <CoverageFiles CoverageDir=".\Coverage" UncoverableAttribute="" />
   <TrendMetrics UseCustomLog="False" LogRecurrence="3" LogLabel="2" UseCustomDir="False" CustomDir="">
     <Chart Name="Size" ShowInReport="True">
       <Serie MetricName="# Lines of Code" MetricUnit="Loc" Color="#FF00BFFF" ChartType="Line" ScaleExp="0" />
@@ -1928,7 +1937,7 @@ select new {
 // Issues of this rule have a **High** severity, because it is important to focus 
 // on these issues **now**, before such code gets released in production.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[//<Name>Avoid transforming an immutable type into a mutable one</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[//<Name>Avoid transforming an immutable type into a mutable one</Name>
 // <Id>ND1108:AvoidTransformingAnImmutableTypeIntoAMutableOne</Id>
 warnif count > 0
 from t in Application.Types where
@@ -5100,7 +5109,7 @@ select new {
 //</Description>]]></Query>
     </Group>
     <Group Name="Code Coverage" Active="True" ShownInReport="True">
-      <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Code should be tested</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Code should be tested</Name>
 // <Id>ND1600:CodeShouldBeTested</Id>
 
 warnif count > 0
@@ -5110,8 +5119,8 @@ warnif count > 0
 // Primitive types (int, bool...) are eliminated from the sequence of types used 
 // by filtering types declared in the namespace System.
 let abstractionUsageFactorFormula = new Func<IEnumerable<IType>,double>(typesUsed => 
-            typesUsed.Count(t => t.ParentNamespace.Name != "System" && !t.IsInterface && !t.IsEnumeration) 
-     / (1 + typesUsed.Count(t => t.ParentNamespace.Name != "System")))
+            typesUsed.Count(t => t.ParentNamespace.Name != "System" && !t.ParentNamespace.NameLike("Client") && !t.IsInterface && !t.IsEnumeration) 
+     / (1 + typesUsed.Count(t => t.ParentNamespace.Name != "System" && !t.ParentNamespace.NameLike("Client"))))
 
 
 from method in Application.Methods
@@ -5218,7 +5227,7 @@ select new {
 // Write unit tests to test and cover the methods and their parent classes
 // matched by this rule.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>New Methods should be tested</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>New Methods should be tested</Name>
 // <Id>ND1601:NewMethodsShouldBeTested</Id>
 
 warnif count > 0
@@ -5270,7 +5279,7 @@ select new {
 //<HowToFix>
 // Write unit-tests to cover the code of most methods and classes added.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Methods refactored should be tested</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Methods refactored should be tested</Name>
 // <Id>ND1602:MethodsRefactoredShouldBeTested</Id>
 
 warnif count > 0
@@ -5321,7 +5330,7 @@ select new {
 //<HowToFix>
 // Write unit-tests to cover the code of most methods and classes refactored.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Assemblies Namespaces and Types should be tested</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Assemblies Namespaces and Types should be tested</Name>
 // <Id>ND1603:AssembliesNamespacesAndTypesShouldBeTested</Id>
 
 warnif count > 0
@@ -5591,7 +5600,7 @@ select new {
 // If you find some *hard-to-test code*, it is certainly a sign that this code
 // is not *well designed* and hence, needs refactoring.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Types 100% covered should be tagged with FullCoveredAttribute</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Types 100% covered should be tagged with FullCoveredAttribute</Name>
 // <Id>ND1608:Types100PercentCoveredShouldBeTaggedWithFullCoveredAttribute</Id>
 
 warnif count > 0 from t in JustMyCode.Types where
@@ -5811,6 +5820,41 @@ select new {
 // But if you wish to run this code query,
 // you'll need to consider test assemblies in your list of 
 // application assemblies analyzed by NDepend.
+//</Description>]]></Query>
+      <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>All issues (grouped per rules)</Name>
+let issues = Issues
+let rules = issues.ToLookup(i => i.Rule)
+from grouping in rules
+let r = grouping.Key
+let ruleIssues = grouping.ToArray()
+orderby ruleIssues.Length descending
+let debt = ruleIssues.Sum(i => i.Debt)
+let annualInterest = ruleIssues.Sum(i => i.AnnualInterest)
+let breakingPoint = debt.BreakingPoint(annualInterest)
+select new { r, 
+             ruleIssues, 
+             debt,
+             annualInterest, 
+             breakingPoint,
+             Category = r.Category
+}
+
+//<Description>
+// **Debt**: Estimated effort to fix the rule issues.
+//
+// **Annual Interest**: Estimated annual cost to leave the rule issues unfixed.
+//
+// **Breaking Point**: Estimated point in time from now, when leaving the 
+// rule issues unfixed cost as much as fixing the issues.
+// A low value indicates easy-to-fix issues with high annual interest.
+// This value can be used to prioritize issues fix, to significantly 
+// reduce interest with minimum effort.
+//
+// **Unfold** the cell in *ruleIssues* column to preview all its issues.
+//
+// **Double-click a rule** to edit the rule and list all its issues.
+//
+// More documentation: https://www.ndepend.com/docs/technical-debt
 //</Description>]]></Query>
     </Group>
     <Group Name="Dead Code" Active="True" ShownInReport="True">
@@ -13084,5 +13128,4 @@ select new {
       </Group>
     </Group>
   </Queries>
-  <WarnFilter />
 </NDepend>
