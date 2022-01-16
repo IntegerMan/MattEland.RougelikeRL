@@ -22,6 +22,13 @@ Each level is a computer system or computer network (TBD which) and the player e
 control and must balance between gathering data, installing malware to harness processor resources, and trying to 
 maintain a low profile.
 
+### Technologies
+
+- .NET 6
+- C# 10
+- MAUI
+- ML.NET
+
 ### Inspirations
 
 This project is inspired by various hacking games including:
