@@ -4722,7 +4722,7 @@ select new {
 // because an API Breaking change can provoque significant
 // friction with consumers of the API.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Methods</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Methods</Name>
 // <Id>ND1501:APIBreakingChangesMethods</Id>
 
 warnif count > 0 from m in codeBase.OlderVersion().Application.Methods
@@ -4802,7 +4802,7 @@ select new {
 // friction with consumers of the API.
 //</HowToFix>
 ]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Fields</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Fields</Name>
 // <Id>ND1502:APIBreakingChangesFields</Id>
 
 warnif count > 0 from f in codeBase.OlderVersion().Application.Fields
@@ -4854,7 +4854,7 @@ select new {
 // because an API Breaking change can provoque significant
 // friction with consumers of the API.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Interfaces and Abstract Classes</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="True"><![CDATA[// <Name>API Breaking Changes: Interfaces and Abstract Classes</Name>
 // <Id>ND1503:APIBreakingChangesInterfacesAndAbstractClasses</Id>
 
 warnif count > 0 from tNewer in Application.Types where 

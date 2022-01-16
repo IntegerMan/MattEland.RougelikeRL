@@ -5,5 +5,28 @@
 /// </summary>
 public sealed class NetworkNode
 {
-    public string Name { get; set; } = "Unknown";
+    public NetworkNode() : this("Unknown")
+    {
+
+    }
+
+    public NetworkNode(string name) : this(name, new NetworkPos(5,5))
+    {
+    }
+
+    public NetworkNode(string name, NetworkPos position)
+    {
+        this.Name = name;
+        this.Position = position;
+    }
+
+    /// <summary>
+    /// Represents the node's central position in the network
+    /// </summary>
+    public NetworkPos Position { get; set; }
+
+    /// <summary>
+    /// Gets the name of the network node
+    /// </summary>
+    public string Name { get; }
 }

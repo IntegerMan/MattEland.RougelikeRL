@@ -3,46 +3,45 @@ using MattEland.RoguelikeRL.Logic;
 using NUnit.Framework;
 using Shouldly;
 
-namespace MattEland.RoguelikeRL.Tests
+namespace MattEland.RoguelikeRL.Tests;
+
+public sealed class NetworkTests
 {
-    public sealed class NetworkTests
+    [Test]
+    public void NetworksShouldStartEmpty()
     {
-        [Test]
-        public void NetworksShouldStartEmpty()
-        {
-            // Arrange
-            Network network = new();
+        // Arrange
+        Network network = new();
 
-            // Act
-            var nodes = network.Nodes;
+        // Act
+        var nodes = network.Nodes;
 
-            // Assert
-            nodes.ShouldBeEmpty();
-            network.NumNodes.ShouldBe(0);
-        }
+        // Assert
+        nodes.ShouldBeEmpty();
+        network.NumNodes.ShouldBe(0);
+    }
 
-        [Test]
-        public void AddingANodeShouldIncreaseNodeCount()
-        {
-            // Arrange
-            Network network = new();
-            NetworkNode node = new();
+    [Test]
+    public void AddingANodeShouldIncreaseNodeCount()
+    {
+        // Arrange
+        Network network = new();
+        NetworkNode node = new();
 
-            // Act
-            network.Add(node);
+        // Act
+        network.Add(node);
 
-            // Assert
-            network.NumNodes.ShouldBe(1);
-        }
+        // Assert
+        network.NumNodes.ShouldBe(1);
+    }
 
-        [Test]
-        public void AddingAnEmptyNodeShouldError()
-        {
-            // Arrange
-            Network net = new();
+    [Test]
+    public void AddingAnEmptyNodeShouldError()
+    {
+        // Arrange
+        Network net = new();
 
-            // Act / Assert
-            Should.Throw<ArgumentNullException>(() => net.Add(null!));
-        }
+        // Act / Assert
+        Should.Throw<ArgumentNullException>(() => net.Add(null!));
     }
 }
