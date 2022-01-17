@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MattEland.RougelikeRL.Client;
+namespace MattEland.RoguelikeRL.Client;
 
 [Application]
 public class MainApplication : MauiApplication

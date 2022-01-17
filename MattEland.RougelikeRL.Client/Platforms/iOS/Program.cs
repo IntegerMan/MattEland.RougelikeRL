@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MattEland.RougelikeRL.Client;
+namespace MattEland.RoguelikeRL.Client;
 
 public class Program
 {

@@ -17,7 +17,12 @@
    .\Microsoft.Maui.Controls.Build.Tasks\6.0.101-preview.11.2349\build\Microsoft.Maui.dll   v1.0.0.0
    .\Microsoft.Maui.Controls.Build.Tasks\6.0.101-preview.11.2349\build\Microsoft.Maui.Controls.Xaml.dll   v1.0.0.0
    .\Microsoft.Maui.Controls.Build.Tasks\6.0.101-preview.11.2349\build\Microsoft.Maui.Controls.dll   v1.0.0.0</Info>
-  <Info>10 source files parsed ; 2 source files not found ; all source files in-sync with PDB</Info>
+  <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\App.xaml.cs} (last modified 16 Jan 2022 22:02:31) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
+  <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\MainPage.xaml.cs} (last modified 16 Jan 2022 22:02:03) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
+  <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\MauiProgram.cs} (last modified 16 Jan 2022 22:04:02) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
+  <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Platforms\Android\MainActivity.cs} (last modified 16 Jan 2022 22:04:09) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
+  <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Platforms\Android\MainApplication.cs} (last modified 16 Jan 2022 22:04:20) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
+  <Info>10 source files parsed ; 2 source files not found ; 5 source files not in-sync with PDB</Info>
   <Info>0 code rule has been extracted from code.</Info>
   <Info>No dependency cycle detected in assemblies referencement graph.</Info>
   <Warning>Invalid coverage file {C:\Dev\MattEland.RougelikeRL\Coverage\2022_01_15.xml}</Warning>
@@ -32,7 +37,7 @@ For example, one of this method is {MattEland.RougelikeRL.Client.Resource.Update
 - the query defined in {Project Rules \ .NET Framework Usage \ System}
 The query or rule name is used as a case-insensitive unique identifier in various situations, like when processing issues in the report and in the various build-process plugin.
 A query or rule name is defined in a comment in the query body this way:  // &lt;Name&gt;Query or Rule Name Here&lt;/Name&gt;</Warning>
-  <Info>Persisting code model snapshot in {C:\Dev\MattEland.RougelikeRL\NDependOut\NDependAnalysisResult_MattEland_RougelikeRL_2022Jan16_00h19.ndar}</Info>
+  <Info>Persisting code model snapshot in {C:\Dev\MattEland.RougelikeRL\NDependOut\NDependAnalysisResult_MattEland_RougelikeRL_2022Jan16_22h05.ndar}</Info>
   <Warning>The source directory {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Microsoft.Maui.Controls.SourceGen\Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator} referenced by the PDB file of the assembly {MattEland.RougelikeRL.Client} can't be found.</Warning>
-  <Info>NDepend analysis done. Duration: 00:00.132</Info>
+  <Info>NDepend analysis done. Duration: 00:00.112</Info>
 </InfoWarnings>

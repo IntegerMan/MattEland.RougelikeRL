@@ -1,4 +1,4 @@
-﻿namespace MattEland.RougelikeRL.Client;
+﻿namespace MattEland.RoguelikeRL.Client;
 
 public static class MauiProgram
 {

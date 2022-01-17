@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MattEland.RougelikeRL.Client;
+namespace MattEland.RoguelikeRL.Client;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate
