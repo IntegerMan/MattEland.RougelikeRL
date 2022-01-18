@@ -1407,7 +1407,7 @@ select new {
 // to increase the quality of these types is **now**, before they get commited 
 // in the next production release.
 //</HowToFix>]]></Query>
-      <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>From now, all types added should be 100% covered by tests</Name>
+      <Query Active="False" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>From now, all types added should be 100% covered by tests</Name>
 // <Id>ND1101:FromNowAllTypesAddedShouldBe100PercentCoveredByTests</Id>
 warnif count > 0 from t in JustMyCode.Types where
 
