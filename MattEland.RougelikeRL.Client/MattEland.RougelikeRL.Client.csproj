@@ -56,6 +56,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\MattEland.RoguelikeRL.Logic\MattEland.RoguelikeRL.Logic.csproj" />
+	  <ProjectReference Include="..\MattEland.RoguelikeRL.ViewModels\MattEland.RoguelikeRL.ViewModels.csproj" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">

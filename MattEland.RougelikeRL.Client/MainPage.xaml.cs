@@ -1,20 +1,14 @@
-﻿namespace MattEland.RoguelikeRL.Client;
+﻿using MattEland.RoguelikeRL.ViewModels;
+
+namespace MattEland.RoguelikeRL.Client;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
-	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-		CounterLabel.Text = $"Current count: {count}";
-
-		SemanticScreenReader.Announce(CounterLabel.Text);
-	}
+		this.BindingContext = new GameViewModel();
+    }
 }
 

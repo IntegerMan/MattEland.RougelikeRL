@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MattEland.RoguelikeRL.Logic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MattEland.RoguelikeRL.Tests", "MattEland.RoguelikeRL.Tests\MattEland.RoguelikeRL.Tests.csproj", "{005C9D92-07E6-45AD-BE28-28A262A4BB8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MattEland.RoguelikeRL.ViewModels", "MattEland.RoguelikeRL.ViewModels\MattEland.RoguelikeRL.ViewModels.csproj", "{6BC8D8B7-7938-4882-8364-8A348F974FC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{005C9D92-07E6-45AD-BE28-28A262A4BB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005C9D92-07E6-45AD-BE28-28A262A4BB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{005C9D92-07E6-45AD-BE28-28A262A4BB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC8D8B7-7938-4882-8364-8A348F974FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC8D8B7-7938-4882-8364-8A348F974FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC8D8B7-7938-4882-8364-8A348F974FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC8D8B7-7938-4882-8364-8A348F974FC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
