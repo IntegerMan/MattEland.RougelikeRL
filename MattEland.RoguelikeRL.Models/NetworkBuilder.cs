@@ -14,7 +14,7 @@
             Network network = new();
 
             network.Add(new NetworkNode("Documents", new NetworkPos(5, 2)));
-            network.Add(new NetworkNode("Downloads", new NetworkPos(8, 6)));
+            network.Add(new NetworkNode("Downloads", new NetworkPos(2, 6)));
             network.Add(new NetworkNode("root", new NetworkPos(5, 5)));
             network.Add(new NetworkNode("App Data", new NetworkPos(7, 4)));
             network.Add(new NetworkNode("Users", new NetworkPos(8, 6)));

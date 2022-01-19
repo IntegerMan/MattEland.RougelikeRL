@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MattEland.RoguelikeRL.Models;
-using MattEland.RoguelikeRL.ViewModels;
 
-namespace MattEland.RoguelikeRL.Desktop
+namespace MattEland.RoguelikeRL.Desktop.Controls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NetworkDisplayControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NetworkDisplayControl : UserControl
     {
-        public MainWindow()
+        public NetworkDisplayControl()
         {
             InitializeComponent();
-
-            var session = new GameSession();
-            this.DataContext = new GameViewModel(session);
         }
     }
 }

@@ -1,25 +1,34 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
+﻿using System.Collections.ObjectModel;
 using MattEland.RoguelikeRL.Models;
 
 namespace MattEland.RoguelikeRL.ViewModels
 {
     // All the code in this file is included in all platforms.
-    public sealed class GameViewModel : INotifyPropertyChanged
+    public sealed class GameViewModel : ViewModelBase
     {
-        private GameSession _session = new();
+        private readonly GameSession _session;
+        private readonly ObservableCollection<NodeViewModel> _nodes = new();
+
+        public GameViewModel(GameSession session)
+        {
+            _session = session;
+
+            UpdateNodes();
+        }
+
+        private void UpdateNodes()
+        {
+            _nodes.Clear();
+
+            foreach (var node in _session.ActiveNetwork.Nodes)
+            {
+                _nodes.Add(new NodeViewModel(node));
+            }
+        }
 
         public string Test => "Hello There!";
 
-        public IEnumerable<NetworkNode> Nodes => _session.ActiveNetwork.Nodes;
+        public ObservableCollection<NodeViewModel> Nodes => _nodes;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

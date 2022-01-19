@@ -16,7 +16,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MattEland.RoguelikeRL.Deskt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MattEland.RoguelikeRL.ViewModels", "MattEland.RoguelikeRL.ViewModels\MattEland.RoguelikeRL.ViewModels.csproj", "{14CB4DBE-7210-48E5-AEC1-672519D5D05A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MattEland.RoguelikeRL.Models", "MattEland.RoguelikeRL.Models\MattEland.RoguelikeRL.Models.csproj", "{910D134B-C1B4-4E11-9BFE-6BEC2AC9DE5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MattEland.RoguelikeRL.Models", "MattEland.RoguelikeRL.Models\MattEland.RoguelikeRL.Models.csproj", "{910D134B-C1B4-4E11-9BFE-6BEC2AC9DE5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{2838C888-B1EF-4CFF-8EEB-5360A194F721}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{7F2AF291-473C-4943-A5E1-7333F2F72467}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C3566E5B-61B5-4EB9-97A2-27A566E09E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{005C9D92-07E6-45AD-BE28-28A262A4BB8C} = {C3566E5B-61B5-4EB9-97A2-27A566E09E27}
+		{BE506267-CC76-4898-B732-98F302D1D37B} = {7F2AF291-473C-4943-A5E1-7333F2F72467}
+		{14CB4DBE-7210-48E5-AEC1-672519D5D05A} = {7F2AF291-473C-4943-A5E1-7333F2F72467}
+		{910D134B-C1B4-4E11-9BFE-6BEC2AC9DE5A} = {2838C888-B1EF-4CFF-8EEB-5360A194F721}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
