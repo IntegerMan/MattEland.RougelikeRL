@@ -4,22 +4,19 @@
   <Info>Visual Studio solution file resolved to absolute file path: from    {.\MattEland.RougelikeRL.sln}    to    {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.sln}</Info>
   <Info>Output directory resolved to absolute directory path: C:\Dev\MattEland.RougelikeRL\NDependOut</Info>
   <Info>Directory that contains coverage file(s) resolved to absolute directory path: C:\Dev\MattEland.RougelikeRL\Coverage</Info>
+  <Info>Compare with analysis result obtained on 2022 January - 15 Saturday 22:45  (which is the analysis result with date closest to 30 days ago)</Info>
   <Info>.NET Assemblies resolved from the Visual Studio solution file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.sln}
    C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\bin\Debug\net6.0-android\MattEland.RougelikeRL.Client.dll
    C:\Dev\MattEland.RougelikeRL\MattEland.RoguelikeRL.Logic\bin\Debug\net6.0\MattEland.RoguelikeRL.Logic.dll
-   C:\Dev\MattEland.RougelikeRL\MattEland.RoguelikeRL.ViewModels\bin\Debug\net6.0\MattEland.RoguelikeRL.ViewModels.dll
-   C:\Dev\MattEland.RougelikeRL\MattEland.RoguelikeRL.Desktop\bin\Debug\net6.0-windows\MattEland.RoguelikeRL.Desktop.dll</Info>
+   C:\Dev\MattEland.RougelikeRL\MattEland.RoguelikeRL.ViewModels\bin\Debug\net6.0\MattEland.RoguelikeRL.ViewModels.dll</Info>
   <Info>.NET Assembly filtered out from the Visual Studio solution file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.sln}
    MattEland.RoguelikeRL.Tests</Info>
   <Info>Concurrent mode</Info>
   <Info>.NET Assemblies loaded from {C:\Windows\Microsoft.NET\Framework\v4.0.30319} 
-   System.Xaml.dll   v4.0.0.0
    System.Threading.dll   v4.0.0.0
    System.ObjectModel.dll   v4.0.0.0
    System.Collections.dll   v4.0.0.0
    System.Runtime.dll   v4.0.0.0</Info>
-  <Info>.NET Assembly loaded from {C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF} 
-   PresentationFramework.dll   v4.0.0.0</Info>
   <Info>.NET Assemblies loaded from {C:\Users\Admin\.nuget\packages} 
    .\Microsoft.Maui.Controls.Build.Tasks\6.0.101-preview.11.2349\build\Microsoft.Maui.dll   v1.0.0.0
    .\Microsoft.Maui.Controls.Build.Tasks\6.0.101-preview.11.2349\build\Microsoft.Maui.Controls.Xaml.dll   v1.0.0.0
@@ -29,7 +26,7 @@
   <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\MauiProgram.cs} (last modified 16 Jan 2022 22:04:02) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
   <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Platforms\Android\MainActivity.cs} (last modified 16 Jan 2022 22:04:09) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
   <Warning>The source file {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Platforms\Android\MainApplication.cs} (last modified 16 Jan 2022 22:04:20) and the PDB file of the assembly {MattEland.RougelikeRL.Client} (last modified 15 Jan 2022 22:03:32) are not in-sync.</Warning>
-  <Info>15 source files parsed ; 2 source files not found ; 5 source files not in-sync with PDB</Info>
+  <Info>12 source files parsed ; 2 source files not found ; 5 source files not in-sync with PDB</Info>
   <Info>0 code rule has been extracted from code.</Info>
   <Info>No dependency cycle detected in assemblies referencement graph.</Info>
   <Warning>Invalid coverage file {C:\Dev\MattEland.RougelikeRL\Coverage\2022_01_15.xml}</Warning>
@@ -47,7 +44,8 @@ For example, one of this method is {MattEland.RoguelikeRL.Logic.GameSession.get_
 - the query defined in {Project Rules \ .NET Framework Usage \ System}
 The query or rule name is used as a case-insensitive unique identifier in various situations, like when processing issues in the report and in the various build-process plugin.
 A query or rule name is defined in a comment in the query body this way:  // &lt;Name&gt;Query or Rule Name Here&lt;/Name&gt;</Warning>
-  <Info>Persisting code model snapshot in {C:\Dev\MattEland.RougelikeRL\NDependOut\NDependAnalysisResult_MattEland_RougelikeRL_2022Jan18_21h43.ndar}</Info>
+  <Info>Persisting code model snapshot in {C:\Dev\MattEland.RougelikeRL\NDependOut\NDependAnalysisResult_MattEland_RougelikeRL_2022Jan18_15h45.ndar}</Info>
   <Warning>The source directory {C:\Dev\MattEland.RougelikeRL\MattEland.RougelikeRL.Client\Microsoft.Maui.Controls.SourceGen\Microsoft.Maui.Controls.SourceGen.CodeBehindGenerator} referenced by the PDB file of the assembly {MattEland.RougelikeRL.Client} can't be found.</Warning>
-  <Info>NDepend analysis done. Duration: 00:00.165</Info>
+  <Info>Start log trend metrics values out-of-process.</Info>
+  <Info>NDepend analysis done. Duration: 00:00.199</Info>
 </InfoWarnings>

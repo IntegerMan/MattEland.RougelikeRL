@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MattEland.RoguelikeRL.Logic\MattEland.RoguelikeRL.Logic.csproj" />
+    <ProjectReference Include="..\MattEland.RoguelikeRL.Models\MattEland.RoguelikeRL.Models.csproj" />
   </ItemGroup>
 
 </Project>

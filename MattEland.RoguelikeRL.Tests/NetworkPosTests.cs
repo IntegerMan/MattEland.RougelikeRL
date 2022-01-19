@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MattEland.RoguelikeRL.Logic;
+using MattEland.RoguelikeRL.Models;
 using NUnit.Framework;
 using Shouldly;
 

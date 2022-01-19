@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MattEland.RoguelikeRL.Models\MattEland.RoguelikeRL.Models.csproj" />
+    <ProjectReference Include="..\MattEland.RoguelikeRL.ViewModels\MattEland.RoguelikeRL.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

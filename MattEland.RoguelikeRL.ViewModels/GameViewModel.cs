@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
-using MattEland.RoguelikeRL.Logic;
+using MattEland.RoguelikeRL.Models;
 
 namespace MattEland.RoguelikeRL.ViewModels
 {
