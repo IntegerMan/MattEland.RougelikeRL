@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MattEland.RoguelikeRL.Models;
+using MattEland.RoguelikeRL.Models.Networks;
 
 namespace MattEland.RoguelikeRL.ViewModels
 {
@@ -16,11 +17,13 @@ namespace MattEland.RoguelikeRL.ViewModels
             _node = node;
         }
 
-        public double X => _node.Position.X * Scale;
-        public double Y => _node.Position.Y * Scale;
+        public double Offset => (-Width / 2.0);
 
-        public double Width => 5 * Scale;
-        public double Height => 5 * Scale;
+        public double X => Offset + (_node.Position.X * Scale);
+        public double Y => Offset + (_node.Position.Y * Scale);
+
+        public double Width => 1500 / Scale; // Designed for a base scale of 30 having a width of 50
+        public double Height => Width;
 
         public int Scale => 30;
 

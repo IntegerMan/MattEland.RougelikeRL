@@ -9,28 +9,40 @@
              mc:Ignorable="d" 
              Background="#333333"
              d:DesignHeight="450" d:DesignWidth="800">
-    <ItemsControl ItemsSource="{Binding Nodes}">
+    <UserControl.Resources>
+        <ItemsPanelTemplate x:Key="ItemsPanelCanvas">
+            <Canvas IsItemsHost="True" />
+        </ItemsPanelTemplate>
 
-        <!-- Render items differently -->
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <local:NetworkNodeControl />
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
+        <Style x:Key="ItemContainerStyleCanvas" d:DataContext="{d:DesignInstance viewModels:NodeViewModel}">
+            <Setter Property="Canvas.Left" Value="{Binding Path=X}"/>
+            <Setter Property="Canvas.Top" Value="{Binding Path=Y}"/>
+        </Style>
 
-        <!-- Arrange items in a 2D X/Y layout -->
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <Canvas IsItemsHost="True" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
+    </UserControl.Resources>
+    <Grid>
+        <ItemsControl ItemsSource="{Binding Connections}" 
+                      ItemsPanel="{StaticResource ItemsPanelCanvas}"
+                      ItemContainerStyle="{StaticResource ItemContainerStyleCanvas}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Line Stroke="DarkBlue" StrokeThickness="5"
+                          X1="{Binding X1}" Y1="{Binding Y1}"
+                          X2="{Binding X2}" Y2="{Binding Y2}"
+                    />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl ItemsSource="{Binding Nodes}" 
+                      ItemsPanel="{StaticResource ItemsPanelCanvas}"
+                      ItemContainerStyle="{StaticResource ItemContainerStyleCanvas}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:NetworkNodeControl />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
 
-        <!-- This style positions each bound item's container -->
-        <ItemsControl.ItemContainerStyle>
-            <Style d:DataContext="{d:DesignInstance viewModels:NodeViewModel}">
-                <Setter Property="Canvas.Left" Value="{Binding Path=X}"/>
-                <Setter Property="Canvas.Top" Value="{Binding Path=Y}"/>
-            </Style>
-        </ItemsControl.ItemContainerStyle>
-    </ItemsControl>
+    </Grid>
+
 </UserControl>

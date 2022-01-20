@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MattEland.RoguelikeRL.Models;
+using MattEland.RoguelikeRL.Models.Networks;
 using NUnit.Framework;
 using Shouldly;
 

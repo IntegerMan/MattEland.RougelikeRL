@@ -1,4 +1,4 @@
-﻿namespace MattEland.RoguelikeRL.Models;
+﻿namespace MattEland.RoguelikeRL.Models.Networks;
 
 /// <summary>
 /// Represents a position within a network

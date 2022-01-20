@@ -1,5 +1,6 @@
 using System;
 using MattEland.RoguelikeRL.Models;
+using MattEland.RoguelikeRL.Models.Networks;
 using NUnit.Framework;
 using Shouldly;
 

@@ -1,4 +1,6 @@
-﻿namespace MattEland.RoguelikeRL.Models
+﻿using MattEland.RoguelikeRL.Models.Networks;
+
+namespace MattEland.RoguelikeRL.Models
 {
     /// <summary>
     /// Represents an ongoing run through a game

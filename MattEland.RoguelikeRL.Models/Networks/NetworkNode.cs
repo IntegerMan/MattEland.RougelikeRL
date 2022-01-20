@@ -1,4 +1,4 @@
-﻿namespace MattEland.RoguelikeRL.Models;
+﻿namespace MattEland.RoguelikeRL.Models.Networks;
 
 /// <summary>
 /// Represents a node inside of a given <see cref="Network"/>. This is an area that the player will be located in and can move to other nodes.

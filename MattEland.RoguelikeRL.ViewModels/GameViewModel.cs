@@ -8,6 +8,7 @@ namespace MattEland.RoguelikeRL.ViewModels
     {
         private readonly GameSession _session;
         private readonly ObservableCollection<NodeViewModel> _nodes = new();
+        private readonly ObservableCollection<ConnectionViewModel> _connections = new();
 
         public GameViewModel(GameSession session)
         {
@@ -19,10 +20,16 @@ namespace MattEland.RoguelikeRL.ViewModels
         private void UpdateNodes()
         {
             _nodes.Clear();
+            _connections.Clear();
 
             foreach (var node in _session.ActiveNetwork.Nodes)
             {
                 _nodes.Add(new NodeViewModel(node));
+            }
+
+            foreach (var conn in _session.ActiveNetwork.Connections)
+            {
+                _connections.Add(new ConnectionViewModel(conn));
             }
         }
 
@@ -30,6 +37,7 @@ namespace MattEland.RoguelikeRL.ViewModels
         public string Title => "Emergence RL Prototype";
 
         public ObservableCollection<NodeViewModel> Nodes => _nodes;
+        public ObservableCollection<ConnectionViewModel> Connections => _connections;
 
     }
 }
