@@ -6,11 +6,19 @@
              xmlns:local="clr-namespace:MattEland.RoguelikeRL.Desktop.Controls"
              xmlns:viewModels="clr-namespace:MattEland.RoguelikeRL.ViewModels;assembly=MattEland.RoguelikeRL.ViewModels"
              d:DataContext="{d:DesignInstance viewModels:NodeViewModel}"
-             Background="SteelBlue"
              mc:Ignorable="d" 
              ToolTip="{Binding Name}"
-             Width="50" Height="50">
-    <Grid>
+             >
+    <Canvas Width="50" Height="50">
+        <Ellipse  Fill="SteelBlue" Width="50" Height="50">
             
-    </Grid>
+        </Ellipse>
+        <TextBlock Text="{Binding Name}" FontSize="8"
+                   HorizontalAlignment="Stretch"
+                   Width="50"
+                   Canvas.Left="0"                    
+                   Canvas.Right="50"
+                   TextAlignment="Center"
+                   Canvas.Bottom="50" Canvas.Top="30"/>
+    </Canvas>
 </UserControl>

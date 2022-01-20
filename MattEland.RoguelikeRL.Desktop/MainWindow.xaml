@@ -6,10 +6,12 @@
         xmlns:vm="clr-namespace:MattEland.RoguelikeRL.ViewModels;assembly=MattEland.RoguelikeRL.ViewModels"
         xmlns:rlc="clr-namespace:MattEland.RoguelikeRL.Desktop.Controls"
         mc:Ignorable="d"
-        Title="Roguelike RL by Matt Eland" 
+        Title="{Binding Path=Title}" 
         Width="800" Height="600" d:DataContext="{d:DesignInstance vm:GameViewModel}">
     <DockPanel>
         <Label Content="{Binding Test}"
+               Background="SteelBlue"
+               Foreground="Black"
                DockPanel.Dock="Top"/>
         <rlc:NetworkDisplayControl />
     </DockPanel>

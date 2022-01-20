@@ -26,7 +26,8 @@ namespace MattEland.RoguelikeRL.ViewModels
             }
         }
 
-        public string Test => "Hello There!";
+        public string Test => "Contact Matt Eland (@IntegerMan) with any questions";
+        public string Title => "Emergence RL Prototype";
 
         public ObservableCollection<NodeViewModel> Nodes => _nodes;
 
