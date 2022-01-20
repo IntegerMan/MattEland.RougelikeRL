@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root CoveredStatements="112" TotalStatements="158" CoveragePercent="71" ReportType="NDependXML" DotCoverVersion="2021.3.2">
+  <Assembly Name="MattEland.RoguelikeRL.Desktop" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+    <Namespace Name="MattEland.RoguelikeRL.Desktop" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+      <Type Name="MainWindow" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+        <Method Name=".ctor()" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" FirstStatementLine="25" />
+      </Type>
+    </Namespace>
+    <Namespace Name="MattEland.RoguelikeRL.Desktop.Controls" CoveredStatements="0" TotalStatements="8" CoveragePercent="0">
+      <Type Name="NetworkDisplayControl" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+        <Method Name=".ctor()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" FirstStatementLine="23" />
+      </Type>
+      <Type Name="NetworkNodeControl" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+        <Method Name=".ctor()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" FirstStatementLine="23" />
+      </Type>
+    </Namespace>
+  </Assembly>
+  <Assembly Name="MattEland.RoguelikeRL.Models" CoveredStatements="47" TotalStatements="47" CoveragePercent="100">
+    <Namespace Name="MattEland.RoguelikeRL.Models" CoveredStatements="47" TotalStatements="47" CoveragePercent="100">
+      <Type Name="GameSession" CoveredStatements="9" TotalStatements="9" CoveragePercent="100">
+        <Method Name=".ctor()" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" FirstStatementLine="8" />
+        <Method Name=".ctor(NetworkBuilder)" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="12" />
+        <Method Name="get_ActiveNetwork()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="22" />
+        <Method Name="get_Status()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="20" />
+      </Type>
+      <Type Name="Network" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+        <Method Name=".ctor()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="8" />
+        <Method Name="Add(NetworkNode)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" FirstStatementLine="26" />
+        <Method Name="get_Nodes()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="13" />
+        <Method Name="get_NumNodes()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="18" />
+      </Type>
+      <Type Name="NetworkBuilder" CoveredStatements="10" TotalStatements="10" CoveragePercent="100">
+        <Method Name="BuildSampleLevel()" CoveredStatements="10" TotalStatements="10" CoveragePercent="100" FirstStatementLine="13" />
+      </Type>
+      <Type Name="NetworkNode" CoveredStatements="14" TotalStatements="14" CoveragePercent="100">
+        <Method Name=".ctor()" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" FirstStatementLine="8" />
+        <Method Name=".ctor(String)" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" FirstStatementLine="13" />
+        <Method Name=".ctor(String,NetworkPos)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" FirstStatementLine="17" />
+        <Method Name="get_Name()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="31" />
+        <Method Name="get_Position()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="26" />
+        <Method Name="set_Position(NetworkPos)" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="26" />
+      </Type>
+      <Type Name="NetworkPos" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+        <Method Name=".ctor(Int32,Int32)" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" FirstStatementLine="6" />
+        <Method Name="AdjustPosition(Int32,Int32)" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" FirstStatementLine="15" />
+      </Type>
+    </Namespace>
+  </Assembly>
+  <Assembly Name="MattEland.RoguelikeRL.Tests" CoveredStatements="65" TotalStatements="65" CoveragePercent="100">
+    <Namespace Name="MattEland.RoguelikeRL.Tests" CoveredStatements="65" TotalStatements="65" CoveragePercent="100">
+      <Type Name="GameSessionTests" CoveredStatements="12" TotalStatements="12" CoveragePercent="100">
+        <Method Name="GameSessionShouldHaveANetwork()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="24" />
+        <Method Name="GameSessionShouldHaveNetworkNodes()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="36" />
+        <Method Name="GameSessionsShouldStartInTheActiveState()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="12" />
+      </Type>
+      <Type Name="NetworkBuilderTests" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+        <Method Name="NetworkBuilderShouldGenerateNonEmptyNetwork()" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" FirstStatementLine="12" />
+      </Type>
+      <Type Name="NetworkNodeTests" CoveredStatements="13" TotalStatements="13" CoveragePercent="100">
+        <Method Name="NetworkNodesShouldDefaultToUnknownName()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="12" />
+        <Method Name="NetworkNodesShouldRespectNameParameter()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="24" />
+        <Method Name="NetworkNodesShouldRespectPositionParameter()" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" FirstStatementLine="38" />
+      </Type>
+      <Type Name="NetworkPosTests" CoveredStatements="17" TotalStatements="17" CoveragePercent="100">
+        <Method Name="AdjustNetworkPosShouldResultInCorrectPos()" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" FirstStatementLine="30" />
+        <Method Name="NetworkPosConstructorSetsPosition()" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" FirstStatementLine="17" />
+        <Method Name="NetworkPosEquality(Int32,Int32)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" FirstStatementLine="44" />
+      </Type>
+      <Type Name="NetworkTests" CoveredStatements="17" TotalStatements="17" CoveragePercent="100">
+        <Type Name="&lt;&gt;c__DisplayClass2_0" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+          <Method Name="&lt;AddingAnEmptyNodeShouldError&gt;b__0()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" FirstStatementLine="45" />
+        </Type>
+        <Method Name="AddingAnEmptyNodeShouldError()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" FirstStatementLine="40" />
+        <Method Name="AddingANodeShouldIncreaseNodeCount()" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" FirstStatementLine="26" />
+        <Method Name="NetworksShouldStartEmpty()" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" FirstStatementLine="12" />
+      </Type>
+    </Namespace>
+  </Assembly>
+  <Assembly Name="MattEland.RoguelikeRL.ViewModels" CoveredStatements="0" TotalStatements="32" CoveragePercent="0">
+    <Namespace Name="MattEland.RoguelikeRL.ViewModels" CoveredStatements="0" TotalStatements="32" CoveragePercent="0">
+      <Type Name="GameViewModel" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+        <Method Name=".ctor(GameSession)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" FirstStatementLine="10" />
+        <Method Name="get_Nodes()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="32" />
+        <Method Name="get_Test()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="29" />
+        <Method Name="get_Title()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="30" />
+        <Method Name="UpdateNodes()" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" FirstStatementLine="20" />
+      </Type>
+      <Type Name="NodeViewModel" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+        <Method Name=".ctor(NetworkNode)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" FirstStatementLine="14" />
+        <Method Name="get_Height()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="23" />
+        <Method Name="get_Name()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="27" />
+        <Method Name="get_Scale()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="25" />
+        <Method Name="get_Width()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="22" />
+        <Method Name="get_X()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="19" />
+        <Method Name="get_Y()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" FirstStatementLine="20" />
+      </Type>
+      <Type Name="ViewModelBase" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+        <Method Name="OnPropertyChanged(String)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" FirstStatementLine="13" />
+      </Type>
+    </Namespace>
+  </Assembly>
+</Root>
